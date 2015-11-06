@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="styles/bootstrap.min.css" /> -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-select.min.js"></script>
+
+    <script type="text/javascript" src="controllers/index.controller.js"></script>
+
+    <script data-require="d3@*" data-semver="3.3.11" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.3.11/d3.js"></script>
+    <script data-require="moment.js@*" data-semver="2.1.0" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+    <link data-require="nvd3@*" data-semver="1.1.14-beta" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.14-beta/nv.d3.css" />
+    <script data-require="nvd3@*" data-semver="1.1.14-beta" src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.14-beta/nv.d3.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <h3 id="welcome"></h3>
+        <ul id="chat_log">
+        </ul>
+        <div class="col-xs-4">
+            <input class="form-control input-sm" type="text" name="adduser" value="" id="usertextbox" />
+            <button class="btn btn-primary" type="button" id="adduser">Add User</button>
+        </div>
+        <div>
+            <select class="selectpicker" id="users">
+                <option>Cindy</option>
+                <option>Kitty</option>
+            </select>
+            <select class="selectpicker" id="type">
+                <option value="PAID">PAID</option>
+                <option value="OWE">OWE</option>
+                <option value="IS OWED">IS OWED</option>
+            </select>
+            <input class="form-control" type="number" id="amount_box" placeholder="enter the amount..." />
+        </div>
+        <p>Description for your expense</p>
+        <input class="form-control input-sm" type="text" name="chat_box" value="" id="chat_box" placeholder="enter to send" />
+
+        <div id="chart">
+            <h4 id="charttitle">Chart for your Expense</h4>
+            <br>
+            <svg id="svgelem"></svg>
+        </div>
+
+    </div>
+</body>
+
+</html>
